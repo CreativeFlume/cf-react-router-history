@@ -24,7 +24,6 @@ describe('history', () => {
         delete require.cache[require.resolve(historyModule)];
         global.window = {};
         const history = require(historyModule);
-        console.log(history);
       }).to.throw('Browser history needs a DOM');
     });
   });
