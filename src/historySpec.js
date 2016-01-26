@@ -1,4 +1,3 @@
-import jsdom from 'jsdom';
 import { expect } from 'chai';
 
 const historyModule = './history';
