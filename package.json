@@ -1,6 +1,6 @@
 {
   "name": "cf-react-router-history",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A sensible history object to appease react-router on both the client and server. The current version has been tested with react-router 1.0.3.",
   "main": "dist/history.js",
   "scripts": {
