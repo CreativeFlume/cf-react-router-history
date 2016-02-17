@@ -1,8 +1,8 @@
-import createBrowserHistory from 'history/lib/createBrowserHistory';
-import createMemoryHistory from 'history/lib/createMemoryHistory';
+import { browserHistory } from 'react-router';
+import { memoryHistory } from 'react-router';
 
 export function createHistory(windowExists) {
-  return windowExists ? createBrowserHistory() : createMemoryHistory();
+  return windowExists ? browserHistory : memoryHistory;
 }
 
 export default createHistory(typeof window !== 'undefined');
