@@ -5,18 +5,10 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.createHistory = createHistory;
 
-var _createBrowserHistory = require('history/lib/createBrowserHistory');
-
-var _createBrowserHistory2 = _interopRequireDefault(_createBrowserHistory);
-
-var _createMemoryHistory = require('history/lib/createMemoryHistory');
-
-var _createMemoryHistory2 = _interopRequireDefault(_createMemoryHistory);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var _reactRouter = require('react-router');
 
 function createHistory(windowExists) {
-  return windowExists ? (0, _createBrowserHistory2.default)() : (0, _createMemoryHistory2.default)();
+  return windowExists ? _reactRouter.browserHistory : _reactRouter.memoryHistory;
 }
 
 exports.default = createHistory(typeof window !== 'undefined');
